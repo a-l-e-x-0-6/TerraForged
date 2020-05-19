@@ -65,7 +65,7 @@ public class GeneratorSettings {
         @Comment("Controls the sea level")
         public int seaLevel = 63;
 
-        @Range(min = 0F, max = 1F)
+        @Range(min = 0F, max = 10F)
         @Comment("Controls the amount of ocean between continents")
         public float oceanSize = 0.25F;
     }
@@ -73,16 +73,16 @@ public class GeneratorSettings {
     @Serializable
     public static class Land {
 
-        @Range(min = 100, max = 10000)
+        @Range(min = 1, max = 100000)
         @Comment("Controls the size of continents")
         public int continentScale = 4000;
 
-        @Range(min = 250, max = 5000)
+        @Range(min = -25000, max = 25000)
         @Name("Mountain Range Scale")
         @Comment("Controls the size of mountain ranges")
         public int mountainScale = 950;
 
-        @Range(min = 125, max = 5000)
+        @Range(min = 1, max = 50000)
         @Comment("Controls the size of terrain regions")
         public int regionSize = 1000;
     }
@@ -90,15 +90,15 @@ public class GeneratorSettings {
     @Serializable
     public static class Biome {
 
-        @Range(min = 50, max = 1000)
+        @Range(min = 1, max = 50000)
         @Comment("Controls the size of individual biomes")
         public int biomeSize = 200;
 
-        @Range(min = 1, max = 500)
+        @Range(min = -5000, max = 5000)
         @Comment("Controls the scale of shape distortion for biomes")
         public int biomeWarpScale = 35;
 
-        @Range(min = 1, max = 500)
+        @Range(min = -10000, max = 10000)
         @Comment("Controls the strength of shape distortion for biomes")
         public int biomeWarpStrength = 70;
     }
@@ -109,23 +109,23 @@ public class GeneratorSettings {
         @Comment("The noise type")
         public Source type = Source.PERLIN;
 
-        @Range(min = 1, max = 500)
+        @Range(min = -5000, max = 5000)
         @Comment("Controls the scale of the noise")
         public int scale = 8;
 
-        @Range(min = 1, max = 5)
+        @Range(min = 0, max = 50)
         @Comment("Controls the number of noise octaves")
         public int octaves = 2;
 
-        @Range(min = 0F, max = 5.5F)
+        @Range(min = -5.5F, max = 5.5F)
         @Comment("Controls the gain subsequent noise octaves")
         public float gain = 0.5F;
 
-        @Range(min = 0F, max = 10.5F)
+        @Range(min = -10.5F, max = 10.5F)
         @Comment("Controls the lacunarity of subsequent noise octaves")
         public float lacunarity = 2.5F;
 
-        @Range(min = 1, max = 500)
+        @Range(min = -5000, max = 5000)
         @Comment("Controls the strength of the noise")
         public int strength = 24;
 
